@@ -10,20 +10,20 @@ You need to copy both "await.js" and "cedict_ts.u8" from this repo to your proje
 
 ## Usage
 
-  // You must wait for this "loaded" promise to be kept before using the dictionary.
-  Chinese.prototype.loaded.onkeep(function() {
-    chinese = new Chinese();
-    chinese.toEnglish('你好'); // Hello!/Hi!/How are you?
-    chinese.toPinyin('为什么'); // wei4shen2me5
-    chinese.toTraditional('拉萨'); // 拉薩
-    chinese.toSimplified('拉薩'); // 拉萨
-    chinese.getMatchingEntries('着'); // returns an array of all matching dictionary entries
-  });
+    // You must wait for this "loaded" promise to be kept before using the dictionary.
+    Chinese.prototype.loaded.onkeep(function() {
+      chinese = new Chinese();
+      chinese.toEnglish('你好'); // Hello!/Hi!/How are you?
+      chinese.toPinyin('为什么'); // wei4shen2me5
+      chinese.toTraditional('拉萨'); // 拉薩
+      chinese.toSimplified('拉薩'); // 拉萨
+      chinese.getMatchingEntries('着'); // returns an array of all matching dictionary entries
+    });
 
 
 ## Running the tests
 
-  python -m SimpleHTTPServer
+    python -m SimpleHTTPServer
 
 Open localhost:8000, then open the file "SpecRunner.html".
 
